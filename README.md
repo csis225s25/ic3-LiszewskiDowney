@@ -7,6 +7,9 @@ Doing everything from a command prompt or Git Bash (no IDEs allowed), your missi
 
 
 **Changes to code**
-
+Moved import statements to first in the file and javadoc now following.
+We transformed JComboBox into a generic class using <String>.
 
 **What caused it to stop working?**
+Imports not being read first.
+JComboBox was not a generic class and thus was using raw datatypes.
