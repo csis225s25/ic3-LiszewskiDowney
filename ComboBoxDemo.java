@@ -1,13 +1,14 @@
-/** Java Program to create a simple JComboBox
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+
+/** 
+*  Java Program to create a simple JComboBox
 *
 *  Modified from Geeks for Geeks user @andrew1234
 *  @author Ira Goldstein
 *  @version Spring 2010 
 */
-
-import java.awt.event.*;
-import java.awt.*;
-import javax.swing.*;
 
 class ComboBoxDemo extends JFrame implements ItemListener {
 
@@ -18,7 +19,7 @@ class ComboBoxDemo extends JFrame implements ItemListener {
 	static JLabel label, label1;
 
 	// combobox
-	static JComboBox cBox1;
+	static JComboBox<String> cBox1;
 
 	// main class
 	public static void main(String[] args)
@@ -40,7 +41,7 @@ class ComboBoxDemo extends JFrame implements ItemListener {
 		String s1[] = { "Albany", "Schenectady", "Troy", "Glens Falls", "Catskill" };
 
 		// create checkbox
-        cBox1 = new JComboBox(s1);
+        cBox1 = new JComboBox<>(s1);
 		
 		// add ItemListener
 		cBox1.addItemListener(s);
